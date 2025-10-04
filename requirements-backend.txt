@@ -1,0 +1,30 @@
+# Backend Requirements - FastAPI + Python Services
+# Production-ready dependencies for Notion Template Maker
+
+# Web Framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+
+# HTTP Client
+requests==2.31.0
+httpx==0.25.1
+
+# Security & Authentication
+cryptography==41.0.7
+python-jose[cryptography]==3.3.0
+
+# Data Validation
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# Environment Variables
+python-dotenv==1.0.0
+
+# Logging & Monitoring
+structlog==23.2.0
+
+# Code Quality (development)
+black==23.11.0
+flake8==6.1.0
+mypy==1.7.1

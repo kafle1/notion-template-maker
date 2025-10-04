@@ -1,105 +1,120 @@
 # Makefile for Notion Template Maker
-# A Streamlit application for generating customized Notion templates using AI
+# FastAPI + React application for generating customized Notion templates using AI
 
-.PHONY: help install run test lint format clean all dev setup
+.PHONY: help install install-backend install-frontend dev dev-backend dev-frontend build test clean docker-up docker-down
 
 # Default target
-help:
-	@echo "Notion Template Maker - Available commands:"
+.DEFAULT_GOAL := help
+
+# Colors for output
+BLUE := \033[0;34m
+GREEN := \033[0;32m
+YELLOW := \033[0;33m
+RED := \033[0;31m
+NC := \033[0m
+
+help: ## Show this help message
+	@echo "$(BLUE)Notion Template Maker - Commands$(NC)"
 	@echo ""
-	@echo "Development:"
-	@echo "  make install    - Install Python dependencies"
-	@echo "  make run        - Run the Streamlit application"
-	@echo "  make dev        - Install dependencies and run the app"
-	@echo "  make setup      - Complete setup (install + format)"
+	@echo "$(GREEN)Quick Start:$(NC)"
+	@echo "  make install    - Install all dependencies"
+	@echo "  make dev        - Run full application (backend + frontend)"
 	@echo ""
-	@echo "Testing & Quality:"
-	@echo "  make test       - Run all tests"
-	@echo "  make test-unit  - Run unit tests only"
-	@echo "  make lint       - Run linting checks"
-	@echo "  make format     - Format code with black"
-	@echo "  make check      - Run linting and tests"
+	@echo "$(YELLOW)Available commands:$(NC)"
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  $(GREEN)%-18s$(NC) %s\n", $$1, $$2}'
+
+install: install-backend install-frontend ## Install all dependencies (backend + frontend)
+	@echo "$(GREEN)✓ All dependencies installed$(NC)"
+
+install-backend: ## Install Python backend dependencies
+	@echo "$(BLUE)Installing backend dependencies...$(NC)"
+	pip install --upgrade pip
+	pip install -r requirements-backend.txt
+	@echo "$(GREEN)✓ Backend dependencies installed$(NC)"
+
+install-frontend: ## Install Node.js frontend dependencies
+	@echo "$(BLUE)Installing frontend dependencies...$(NC)"
+	cd frontend && npm install
+	@echo "$(GREEN)✓ Frontend dependencies installed$(NC)"
+
+dev: ## Run full stack application (backend + frontend)
+	@echo "$(GREEN)🚀 Starting Notion Template Maker...$(NC)"
+	@echo "$(BLUE)Backend: http://localhost:8000$(NC)"
+	@echo "$(BLUE)Frontend: http://localhost:5173$(NC)"
+	@echo "$(BLUE)API Docs: http://localhost:8000/api/docs$(NC)"
 	@echo ""
-	@echo "Maintenance:"
-	@echo "  make clean      - Clean up cache files"
-	@echo "  make all        - Install, format, test, and run"
-	@echo ""
-	@echo "Quick start: make dev"
+	@trap 'kill 0' EXIT; \
+	(cd backend && python main.py) & \
+	(cd frontend && npm run dev)
 
-# Install Python dependencies
-install:
-	@echo "Installing Python dependencies..."
-	pip install -r requirements.txt
+dev-backend: ## Run only backend server
+	@echo "$(BLUE)Starting backend server...$(NC)"
+	cd backend && python main.py
 
-# Run the Streamlit application
-run:
-	@echo "Starting Notion Template Maker..."
-	streamlit run app.py
+dev-frontend: ## Run only frontend development server
+	@echo "$(BLUE)Starting frontend dev server...$(NC)"
+	cd frontend && npm run dev
 
-# Development setup (install + run)
-dev: install run
+build: ## Build frontend for production
+	@echo "$(BLUE)Building frontend...$(NC)"
+	cd frontend && npm run build
+	@echo "$(GREEN)✓ Build complete - output in frontend/dist$(NC)"
 
-# Complete setup (install + format)
-setup: install format
+lint: ## Run code linters
+	@echo "$(BLUE)Running linters...$(NC)"
+	black src/ backend/ --check
+	flake8 src/ backend/ --max-line-length=88
+	cd frontend && npm run lint
+	@echo "$(GREEN)✓ Linting complete$(NC)"
 
-# Run all tests
-test:
-	@echo "Running all tests..."
-	pytest tests/ -v
+format: ## Format code
+	@echo "$(BLUE)Formatting code...$(NC)"
+	black src/ backend/
+	cd frontend && npm run format || true
+	@echo "$(GREEN)✓ Code formatted$(NC)"
 
-# Run unit tests only
-test-unit:
-	@echo "Running unit tests..."
-	pytest tests/unit/ -v
+check: lint ## Run linting checks
+	@echo "$(GREEN)✓ All checks passed$(NC)"
 
-# Run linting checks
-lint:
-	@echo "Running linting checks..."
-	flake8 src/ tests/ app.py
-	@echo "Linting complete!"
-
-# Format code with black
-format:
-	@echo "Formatting code with black..."
-	black src/ tests/ app.py
-	@echo "Code formatting complete!"
-
-# Run both linting and tests
-check: lint test
-
-# Clean up cache files
-clean:
-	@echo "Cleaning up cache files..."
-	find . -type d -name __pycache__ -exec rm -rf {} +
+clean: ## Clean build artifacts and cache
+	@echo "$(RED)Cleaning build artifacts...$(NC)"
+	rm -rf __pycache__ .pytest_cache .coverage
+	rm -rf src/__pycache__ src/*/__pycache__
+	rm -rf backend/__pycache__ backend/*/__pycache__
+	rm -rf frontend/dist frontend/node_modules/.cache
+	find . -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null || true
 	find . -type f -name "*.pyc" -delete
-	find . -type f -name "*.pyo" -delete
-	find . -type f -name "*.pyd" -delete
-	find . -type d -name ".pytest_cache" -exec rm -rf {} +
-	find . -type d -name "*.egg-info" -exec rm -rf {} +
-	@echo "Cleanup complete!"
+	@echo "$(GREEN)✓ Cleanup complete$(NC)"
 
-# Install, format, test, and run
-all: install format test run
+docker-build: ## Build Docker containers
+	@echo "$(BLUE)Building Docker containers...$(NC)"
+	docker-compose build
+	@echo "$(GREEN)✓ Docker build complete$(NC)"
 
-# Create requirements.txt if it doesn't exist
-requirements.txt:
-	@echo "Creating requirements.txt..."
-	@echo "# Notion Template Maker Dependencies" > requirements.txt
-	@echo "streamlit>=1.28.0" >> requirements.txt
-	@echo "requests>=2.31.0" >> requirements.txt
-	@echo "python-dotenv>=1.0.0" >> requirements.txt
-	@echo "cryptography>=41.0.0" >> requirements.txt
-	@echo "pydantic>=2.0.0" >> requirements.txt
-	@echo "jinja2>=3.1.0" >> requirements.txt
-	@echo "pytest>=7.4.0" >> requirements.txt
-	@echo "black>=23.0.0" >> requirements.txt
-	@echo "flake8>=6.0.0" >> requirements.txt
-	@echo "pytest-mock>=3.10.0" >> requirements.txt
-	@echo "pytest-asyncio>=0.21.0" >> requirements.txt
-	@echo "requirements.txt created!"
+docker-up: ## Start application with Docker
+	@echo "$(GREEN)🚀 Starting with Docker...$(NC)"
+	docker-compose up -d
+	@echo "$(GREEN)✓ Application running at http://localhost:5173$(NC)"
 
-# Show project info
-info:
+docker-down: ## Stop Docker containers
+	@echo "$(RED)Stopping Docker containers...$(NC)"
+	docker-compose down
+	@echo "$(GREEN)✓ Containers stopped$(NC)"
+
+docker-logs: ## View Docker logs
+	docker-compose logs -f
+
+production: build ## Prepare for production deployment
+	@echo "$(BLUE)Preparing production build...$(NC)"
+	@echo "$(GREEN)✓ Ready for deployment$(NC)"
+	@echo "$(YELLOW)Deploy backend: cd backend && uvicorn main:app --host 0.0.0.0 --port 8000$(NC)"
+	@echo "$(YELLOW)Deploy frontend: Serve frontend/dist with nginx or static hosting$(NC)"
+
+setup: install ## Initial setup for new developers
+	@echo "$(GREEN)🎉 Setup complete! Run 'make dev' to start$(NC)"
+
+all: clean install build ## Clean, install, and build everything
+	@echo "$(GREEN)✓ Full build pipeline complete$(NC)"
 	@echo "Notion Template Maker"
 	@echo "===================="
 	@echo "A beautiful, simple app for generating customized Notion templates using AI."
