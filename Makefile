@@ -1,7 +1,7 @@
 # Makefile for Notion Template Maker
 # FastAPI + React application for generating customized Notion templates using AI
 
-.PHONY: help install install-backend install-frontend dev dev-backend dev-frontend build test clean docker-up docker-down
+.PHONY: help install install-backend install-frontend dev dev-backend dev-frontend build clean docker-up docker-down
 
 # Default target
 .DEFAULT_GOAL := help
@@ -78,9 +78,8 @@ check: lint ## Run linting checks
 
 clean: ## Clean build artifacts and cache
 	@echo "$(RED)Cleaning build artifacts...$(NC)"
-	rm -rf __pycache__ .pytest_cache .coverage
-	rm -rf src/__pycache__ src/*/__pycache__
-	rm -rf backend/__pycache__ backend/*/__pycache__
+	rm -rf __pycache__
+	rm -rf backend/__pycache__ backend/*/__pycache__ backend/*/*/__pycache__
 	rm -rf frontend/dist frontend/node_modules/.cache
 	find . -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null || true
 	find . -type f -name "*.pyc" -delete
@@ -120,13 +119,14 @@ all: clean install build ## Clean, install, and build everything
 	@echo "A beautiful, simple app for generating customized Notion templates using AI."
 	@echo ""
 	@echo "Project Structure:"
-	@echo "  app.py              - Main Streamlit application"
-	@echo "  src/                - Source code"
+	@echo "  backend/            - FastAPI backend"
+	@echo "    ├── api/          - API routes"
 	@echo "    ├── models/       - Data models"
 	@echo "    ├── services/     - Business logic"
-	@echo "    ├── api/          - API clients"
-	@echo "    └── ui/           - UI components"
-	@echo "  tests/              - Test suite"
-	@echo "  specs/              - Documentation and specs"
+	@echo "    └── clients/      - External API clients"
+	@echo "  frontend/           - React frontend"
+	@echo "    ├── components/   - UI components"
+	@echo "    ├── pages/        - Page components"
+	@echo "    └── services/     - API client & state"
 	@echo ""
 	@echo "Quick start: make dev"

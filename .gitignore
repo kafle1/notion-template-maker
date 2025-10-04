@@ -53,10 +53,5 @@ logs/
 *.tmp
 *.temp
 
-# Test coverage
-.coverage
-htmlcov/
-.pytest_cache/
-
 # Streamlit
 .streamlit/secrets.toml

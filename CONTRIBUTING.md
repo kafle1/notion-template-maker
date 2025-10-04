@@ -32,11 +32,9 @@ Enhancement suggestions are tracked as GitHub issues. When creating an enhanceme
 
 1. **Fork the repo** and create your branch from `main`
 2. **Make your changes** following our coding standards
-3. **Add tests** if you've added code that should be tested
-4. **Ensure the test suite passes** (`make test`)
-5. **Format your code** (`make format`)
-6. **Run linters** (`make lint`)
-7. **Write a good commit message**
+3. **Format your code** (`make format`)
+4. **Run linters** (`make lint`)
+5. **Write a good commit message**
 
 ## 📝 Development Process
 
@@ -60,8 +58,6 @@ make dev
 notion-template-maker/
 ├── backend/          # FastAPI backend
 ├── frontend/         # React frontend
-├── src/             # Shared Python modules
-├── tests/           # Test suite
 └── docs/            # Documentation
 ```
 
@@ -114,41 +110,6 @@ const TemplateCard = ({ template, onImport }) => {
 - Avoid premature optimization
 - Use meaningful commit messages
 
-### Testing
-
-```bash
-# Run all tests
-make test
-
-# Run specific test types
-pytest tests/unit -v
-pytest tests/integration -v
-pytest tests/contract -v
-
-# Run with coverage
-pytest --cov=src --cov-report=html
-```
-
-#### Writing Tests
-- Write tests for all new features
-- Maintain or improve code coverage
-- Use descriptive test names
-- Follow AAA pattern (Arrange, Act, Assert)
-
-```python
-def test_template_generation_with_valid_input():
-    # Arrange
-    generator = TemplateGenerator()
-    title = "Project Management"
-    
-    # Act
-    result = generator.generate(title)
-    
-    # Assert
-    assert result.title == title
-    assert len(result.pages) > 0
-```
-
 ### Commit Messages
 
 Follow the [Conventional Commits](https://www.conventionalcommits.org/) specification:
@@ -169,7 +130,7 @@ chore: update dependencies
 - `fix/` - Bug fixes
 - `docs/` - Documentation only
 - `refactor/` - Code refactoring
-- `test/` - Adding or updating tests
+- `chore/` - Maintenance tasks
 
 Example: `feature/add-template-sharing`
 

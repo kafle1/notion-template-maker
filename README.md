@@ -1,4 +1,4 @@
-# 🚀 Notion Template Maker# 🚀 Notion Template Maker# 🚀 Notion Template Maker# Notion Template Maker
+# 🚀 Notion Template Maker# 🚀 Notion Template Maker# 🚀 Notion Template Maker# 🚀 Notion Template Maker# Notion Template Maker
 
 
 
@@ -14,267 +14,545 @@
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.104-green.svg)](https://fastapi.tiangolo.com/)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)> A modern, production-ready web application for generating customized Notion templates using AI.A beautiful, simple web application for generating customized Notion templates using AI. Create professional templates with just a few clicks using natural language descriptions.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)> A modern, production-ready web application for generating customized Notion templates using AI.
 
-## ✨ Features
+A beautiful, simple web application for generating customized Notion templates using AI. Create professional templates with just a few clicks using natural language descriptions.
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 
+## ✨ Features
+
+[![React 18](https://img.shields.io/badge/react-18-blue.svg)](https://reactjs.org/)
+
 - 🤖 **AI-Powered Generation** - Create sophisticated Notion templates using OpenRouter AI
 
-- 🔐 **Notion Integration** - Direct integration with Notion API using Internal Integration[![React 18](https://img.shields.io/badge/react-18-blue.svg)](https://reactjs.org/)
+- 🔐 **Notion Integration** - Direct integration with Notion API using Internal Integration[![FastAPI](https://img.shields.io/badge/FastAPI-0.104-green.svg)](https://fastapi.tiangolo.com/)
 
 - 📦 **One-Click Import** - Import templates directly to your Notion workspace
 
-- 🎨 **Modern UI** - Beautiful, responsive interface built with React and Tailwind CSS[![FastAPI](https://img.shields.io/badge/FastAPI-0.104-green.svg)](https://fastapi.tiangolo.com/)
+- 🎨 **Modern UI** - Beautiful, responsive interface built with React and Tailwind CSS[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)> A modern, production-ready web application for generating customized Notion templates using AI.A beautiful, simple web application for generating customized Notion templates using AI. Create professional templates with just a few clicks using natural language descriptions.
 
 - ⚡ **Fast & Efficient** - Async FastAPI backend for optimal performance
 
-- 🐳 **Docker Ready** - Full containerization support for easy deployment[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)![Notion Template Maker](https://img.shields.io/badge/Notion-Template%20Maker-blue?style=for-the-badge&logo=notion)
+- 🐳 **Docker Ready** - Full containerization support for easy deployment## ✨ Features
 
 
 
-## 🏗️ Architecture## ✨ Features
+## 🏗️ Architecture[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 
 
 
-```[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)![Python](https://img.shields.io/badge/Python-3.8+-green?style=flat-square&logo=python)
+```- 🤖 **AI-Powered Generation** - Create sophisticated Notion templates using OpenRouter AI
 
-Frontend (React + Vite)  ←→  Backend (FastAPI)  ←→  External APIs
+┌─────────────────────────────────────────────────────────────┐
 
-   ↓                              ↓                    ↓- 🤖 **AI-Powered Template Generation** - Create sophisticated Notion templates using OpenRouter AI
+│                     Frontend (React)                         │- 🔐 **Notion Integration** - Direct integration with Notion API using Internal Integration[![React 18](https://img.shields.io/badge/react-18-blue.svg)](https://reactjs.org/)
 
-Components & Pages            Services & Routes     OpenRouter + Notion
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐      │
 
-```- 🔐 **Notion Integration** - Direct integration with Notion API using Internal Integration[![React 18](https://img.shields.io/badge/react-18-blue.svg)](https://reactjs.org/)![Streamlit](https://img.shields.io/badge/Streamlit-1.0+-red?style=flat-square&logo=streamlit)
+│  │  Components  │  │    Pages     │  │   Services   │      │- 📦 **One-Click Import** - Import templates directly to your Notion workspace
 
+│  │  (UI/UX)     │  │  (Routes)    │  │  (API/State) │      │
 
+│  └──────────────┘  └──────────────┘  └──────────────┘      │- 🎨 **Modern UI** - Beautiful, responsive interface built with React and Tailwind CSS[![FastAPI](https://img.shields.io/badge/FastAPI-0.104-green.svg)](https://fastapi.tiangolo.com/)
 
-## 🚀 Quick Start- 📦 **Direct Import** - One-click import templates directly to your Notion workspace
+└─────────────────────────────────────────────────────────────┘
 
+                            ↕ HTTP/REST- ⚡ **Fast & Efficient** - Async FastAPI backend for optimal performance
 
+┌─────────────────────────────────────────────────────────────┐
 
-### Prerequisites- 🎨 **Modern UI** - Beautiful, responsive interface built with React and Tailwind CSS[![FastAPI](https://img.shields.io/badge/FastAPI-0.104-green.svg)](https://fastapi.tiangolo.com/)![OpenRouter](https://img.shields.io/badge/OpenRouter-API-orange?style=flat-square)
+│                     Backend (FastAPI)                        │- 🐳 **Docker Ready** - Full containerization support for easy deployment[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)![Notion Template Maker](https://img.shields.io/badge/Notion-Template%20Maker-blue?style=for-the-badge&logo=notion)
 
-
-
-- Python 3.11+- ⚡ **Fast & Efficient** - Async FastAPI backend for optimal performance
-
-- Node.js 18+
-
-- OpenRouter API Key- 🐳 **Docker Ready** - Full containerization support for easy deployment
-
-- Notion Internal Integration Secret
-
-- 🧪 **Well Tested** - Comprehensive test suite with unit, integration, and contract tests
-
-### Installation
-
-## ✨ Features## ✨ Features
-
-```bash
-
-# Clone repository## 🏗️ Architecture
-
-git clone https://github.com/yourusername/notion-template-maker.git
-
-cd notion-template-maker
-
-
-
-# Install dependencies and start```
-
-make install && make dev
-
-```┌─────────────────────────────────────────────────────────────┐- 🤖 **AI-Powered Template Generation** - Create sophisticated Notion templates using OpenRouter AI- 🤖 **AI-Powered Generation**: Uses advanced AI models to create custom Notion templates
-
-
-
-**That's it!** The application will be running at:│                     Frontend (React)                         │
-
-- **Frontend**: http://localhost:5173
-
-- **Backend**: http://localhost:8000│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐      │- 🔐 **Secure OAuth Integration** - Seamless Notion workspace authentication- 🎨 **Beautiful UI**: Clean, modern interface built with Streamlit
-
-- **API Docs**: http://localhost:8000/api/docs
-
-│  │  Components  │  │    Pages     │  │   Services   │      │
-
-## 📋 Available Commands
-
-│  │  (UI/UX)     │  │  (Routes)    │  │  (API/State) │      │- 📦 **Direct Import** - One-click import templates directly to your Notion workspace- 🔐 **Secure Authentication**: OAuth integration with Notion for secure access
-
-```bash
-
-make help              # Show all commands│  └──────────────┘  └──────────────┘  └──────────────┘      │
-
-make install           # Install all dependencies
-
-make dev              # Run full stack application└─────────────────────────────────────────────────────────────┘- 🎨 **Modern UI** - Beautiful, responsive interface built with React and Tailwind CSS- 📱 **Responsive Design**: Works seamlessly on desktop and mobile devices
-
-make dev-backend      # Run only backend
-
-make dev-frontend     # Run only frontend                            ↕ HTTP/REST
-
-make build            # Build for production
-
-make lint             # Run code linters┌─────────────────────────────────────────────────────────────┐- ⚡ **Fast & Efficient** - Async FastAPI backend for optimal performance- ⚡ **Fast Generation**: Optimized for <60 second template creation
-
-make format           # Format code
-
-make clean            # Clean artifacts│                     Backend (FastAPI)                        │
-
-make docker-up        # Start with Docker
-
-make docker-down      # Stop Docker containers│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐      │- 🐳 **Docker Ready** - Full containerization support for easy deployment- 🛡️ **Input Validation**: Comprehensive validation and sanitization
-
-```
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐      │
 
 │  │     API      │  │   Services   │  │    Models    │      │
 
-## 🔧 Configuration
+│  │   (Routes)   │  │  (Business)  │  │   (Data)     │      │
 
-│  │   (Routes)   │  │  (Business)  │  │   (Data)     │      │- 🧪 **Well Tested** - Comprehensive test suite with unit, integration, and contract tests- 📊 **Progress Tracking**: Real-time progress indicators during generation
+│  └──────────────┘  └──────────────┘  └──────────────┘      │## 🏗️ Architecture## ✨ Features
 
-### 1. Copy Environment Template
-
-│  └──────────────┘  └──────────────┘  └──────────────┘      │
-
-```bash
-
-cp .env.example .env└─────────────────────────────────────────────────────────────┘- 🔄 **Session Management**: Secure session handling with encryption
-
-```
+└─────────────────────────────────────────────────────────────┘
 
                             ↕ API Calls
 
-### 2. Configure API Keys
+┌─────────────────────────────────────────────────────────────┐
 
-┌─────────────────────────────────────────────────────────────┐## 🏗️ Architecture- 📝 **Template Preview**: Live preview of generated templates
+│              External Services                               │```[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)![Python](https://img.shields.io/badge/Python-3.8+-green?style=flat-square&logo=python)
 
-Edit `.env`:
+│  ┌──────────────┐                    ┌──────────────┐       │
 
-│              External Services                               │
+│  │  OpenRouter  │                    │    Notion    │       │Frontend (React + Vite)  ←→  Backend (FastAPI)  ←→  External APIs
 
-```env
+│  │     API      │                    │     API      │       │
 
-# Required│  ┌──────────────┐                    ┌──────────────┐       │- 📤 **Easy Export**: Direct export to Notion workspaces
+│  └──────────────┘                    └──────────────┘       │   ↓                              ↓                    ↓- 🤖 **AI-Powered Template Generation** - Create sophisticated Notion templates using OpenRouter AI
 
-OPENROUTER_API_KEY=your_openrouter_api_key_here
+└─────────────────────────────────────────────────────────────┘
 
-NOTION_INTEGRATION_SECRET=secret_your_notion_integration_secret_here│  │  OpenRouter  │                    │    Notion    │       │
-
-
-
-# Optional│  │     API      │                    │     API      │       │```
-
-APP_ENV=development
-
-DEBUG=true│  └──────────────┘                    └──────────────┘       │
-
-LOG_LEVEL=INFO
-
-```└─────────────────────────────────────────────────────────────┘┌─────────────────────────────────────────────────────────────┐## 🚀 Quick Start
+```Components & Pages            Services & Routes     OpenRouter + Notion
 
 
 
-### 3. Get API Keys```
+## 🚀 Quick Start```- 🔐 **Notion Integration** - Direct integration with Notion API using Internal Integration[![React 18](https://img.shields.io/badge/react-18-blue.svg)](https://reactjs.org/)![Streamlit](https://img.shields.io/badge/Streamlit-1.0+-red?style=flat-square&logo=streamlit)
 
 
-
-#### OpenRouter API Key│                     Frontend (React)                         │
-
-
-
-1. Sign up at [OpenRouter](https://openrouter.ai/)## 🚀 Quick Start
-
-2. Navigate to [API Keys](https://openrouter.ai/keys)
-
-3. Create a new API key│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐      │### Prerequisites
-
-4. Copy and paste into `.env`
 
 ### Prerequisites
 
-#### Notion Internal Integration
-
-│  │  Components  │  │    Pages     │  │   Services   │      │
-
-1. Go to [Notion Integrations](https://www.notion.so/my-integrations)
-
-2. Click **"+ New integration"**- Python 3.11+
-
-3. Give it a name (e.g., "Template Maker")
-
-4. Select your workspace- Node.js 18+│  │  (UI/UX)     │  │  (Routes)    │  │  (API/State) │      │- Python 3.8 or higher
-
-5. Set capabilities:
-
-   - ✅ Read content- npm or pnpm
-
-   - ✅ Insert content
-
-   - ✅ Update content- OpenRouter API Key│  └──────────────┘  └──────────────┘  └──────────────┘      │- A Notion account
-
-6. Copy the **"Internal Integration Secret"**
-
-7. Paste into `.env`- Notion Internal Integration Secret
 
 
+- Python 3.11+## 🚀 Quick Start- 📦 **Direct Import** - One-click import templates directly to your Notion workspace
 
-**Important**: Share your Notion pages with the integration:└─────────────────────────────────────────────────────────────┘- An OpenRouter API key ([Get one here](https://openrouter.ai/keys))
+- Node.js 18+
 
-- Open page in Notion → "•••" menu → "Add connections" → Select your integration
+- OpenRouter API Key
 
-### One-Command Setup
+- Notion Internal Integration Secret
 
-## 🐳 Docker Deployment
+### Prerequisites- 🎨 **Modern UI** - Beautiful, responsive interface built with React and Tailwind CSS[![FastAPI](https://img.shields.io/badge/FastAPI-0.104-green.svg)](https://fastapi.tiangolo.com/)![OpenRouter](https://img.shields.io/badge/OpenRouter-API-orange?style=flat-square)
 
-                            ↕ HTTP/REST
+### Installation
+
+
 
 ```bash
 
-# Build and start```bash
+# Clone repository- Python 3.11+- ⚡ **Fast & Efficient** - Async FastAPI backend for optimal performance
 
-make docker-build
+git clone https://github.com/yourusername/notion-template-maker.git
 
-make docker-up# Clone repository┌─────────────────────────────────────────────────────────────┐### Installation
+cd notion-template-maker- Node.js 18+
 
 
 
-# View logsgit clone https://github.com/yourusername/notion-template-maker.git
-
-make docker-logs
-
-cd notion-template-maker│                     Backend (FastAPI)                        │
-
-# Stop
-
-make docker-down
-
-```
-
-# Install and run│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐      │#### Option 1: Using Makefile (Recommended)
-
-## 📁 Project Structure
+# Install dependencies and start- OpenRouter API Key- 🐳 **Docker Ready** - Full containerization support for easy deployment
 
 make install && make dev
 
+```- Notion Internal Integration Secret
+
+
+
+**That's it!** The application will be running at:- 🧪 **Well Tested** - Comprehensive test suite with unit, integration, and contract tests
+
+- **Frontend**: http://localhost:5173
+
+- **Backend**: http://localhost:8000### Installation
+
+- **API Docs**: http://localhost:8000/api/docs
+
+## ✨ Features## ✨ Features
+
+## 📋 Available Commands
+
+```bash
+
+```bash
+
+make help              # Show all commands# Clone repository## 🏗️ Architecture
+
+make install           # Install all dependencies
+
+make dev              # Run full stack applicationgit clone https://github.com/yourusername/notion-template-maker.git
+
+make dev-backend      # Run only backend
+
+make dev-frontend     # Run only frontendcd notion-template-maker
+
+make build            # Build for production
+
+make lint             # Run code linters
+
+make format           # Format code
+
+make clean            # Clean artifacts# Install dependencies and start```
+
+make docker-up        # Start with Docker
+
+make docker-down      # Stop Docker containersmake install && make dev
+
 ```
 
-notion-template-maker/```│  │     API      │  │   Services   │  │    Models    │      │
+```┌─────────────────────────────────────────────────────────────┐- 🤖 **AI-Powered Template Generation** - Create sophisticated Notion templates using OpenRouter AI- 🤖 **AI-Powered Generation**: Uses advanced AI models to create custom Notion templates
+
+## 🔧 Configuration
+
+
+
+### 1. Copy Environment Template
+
+**That's it!** The application will be running at:│                     Frontend (React)                         │
+
+```bash
+
+cp .env.example .env- **Frontend**: http://localhost:5173
+
+```
+
+- **Backend**: http://localhost:8000│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐      │- 🔐 **Secure OAuth Integration** - Seamless Notion workspace authentication- 🎨 **Beautiful UI**: Clean, modern interface built with Streamlit
+
+### 2. Configure API Keys
+
+- **API Docs**: http://localhost:8000/api/docs
+
+Edit `.env`:
+
+│  │  Components  │  │    Pages     │  │   Services   │      │
+
+```env
+
+# Required## 📋 Available Commands
+
+OPENROUTER_API_KEY=your_openrouter_api_key_here
+
+NOTION_INTEGRATION_SECRET=secret_your_notion_integration_secret_here│  │  (UI/UX)     │  │  (Routes)    │  │  (API/State) │      │- 📦 **Direct Import** - One-click import templates directly to your Notion workspace- 🔐 **Secure Authentication**: OAuth integration with Notion for secure access
+
+
+
+# Optional```bash
+
+APP_ENV=development
+
+DEBUG=truemake help              # Show all commands│  └──────────────┘  └──────────────┘  └──────────────┘      │
+
+LOG_LEVEL=INFO
+
+```make install           # Install all dependencies
+
+
+
+### 3. Get API Keysmake dev              # Run full stack application└─────────────────────────────────────────────────────────────┘- 🎨 **Modern UI** - Beautiful, responsive interface built with React and Tailwind CSS- 📱 **Responsive Design**: Works seamlessly on desktop and mobile devices
+
+
+
+#### OpenRouter API Keymake dev-backend      # Run only backend
+
+
+
+1. Sign up at [OpenRouter](https://openrouter.ai/)make dev-frontend     # Run only frontend                            ↕ HTTP/REST
+
+2. Navigate to [API Keys](https://openrouter.ai/keys)
+
+3. Create a new API keymake build            # Build for production
+
+4. Copy and paste into `.env`
+
+make lint             # Run code linters┌─────────────────────────────────────────────────────────────┐- ⚡ **Fast & Efficient** - Async FastAPI backend for optimal performance- ⚡ **Fast Generation**: Optimized for <60 second template creation
+
+#### Notion Internal Integration
+
+make format           # Format code
+
+1. Go to [Notion Integrations](https://www.notion.so/my-integrations)
+
+2. Click **"+ New integration"**make clean            # Clean artifacts│                     Backend (FastAPI)                        │
+
+3. Give it a name (e.g., "Template Maker")
+
+4. Select your workspacemake docker-up        # Start with Docker
+
+5. Set capabilities:
+
+   - ✅ Read contentmake docker-down      # Stop Docker containers│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐      │- 🐳 **Docker Ready** - Full containerization support for easy deployment- 🛡️ **Input Validation**: Comprehensive validation and sanitization
+
+   - ✅ Insert content
+
+   - ✅ Update content```
+
+6. Copy the **"Internal Integration Secret"**
+
+7. Paste into `.env`│  │     API      │  │   Services   │  │    Models    │      │
+
+
+
+**Important**: Share your Notion pages with the integration:## 🔧 Configuration
+
+- Open page in Notion → "•••" menu → "Add connections" → Select your integration
+
+│  │   (Routes)   │  │  (Business)  │  │   (Data)     │      │- 🧪 **Well Tested** - Comprehensive test suite with unit, integration, and contract tests- 📊 **Progress Tracking**: Real-time progress indicators during generation
+
+## 🐳 Docker Deployment
+
+### 1. Copy Environment Template
+
+```bash
+
+# Build and start│  └──────────────┘  └──────────────┘  └──────────────┘      │
+
+make docker-build
+
+make docker-up```bash
+
+
+
+# View logscp .env.example .env└─────────────────────────────────────────────────────────────┘- 🔄 **Session Management**: Secure session handling with encryption
+
+make docker-logs
+
+```
+
+# Stop
+
+make docker-down                            ↕ API Calls
+
+```
+
+### 2. Configure API Keys
+
+## 📁 Project Structure
+
+┌─────────────────────────────────────────────────────────────┐## 🏗️ Architecture- 📝 **Template Preview**: Live preview of generated templates
+
+```
+
+notion-template-maker/Edit `.env`:
 
 ├── backend/                 # FastAPI backend
 
-│   ├── main.py             # Application entry
+│   ├── main.py             # Application entry│              External Services                               │
 
 │   ├── api/routes/         # API endpoints
 
-│   └── DockerfileThat's it! The application will be running at:│  │   (Routes)   │  │  (Business)  │  │   (Data)     │      │```bash
+│   ├── clients/            # External API clients```env
+
+│   ├── models/             # Data models
+
+│   ├── services/           # Business logic# Required│  ┌──────────────┐                    ┌──────────────┐       │- 📤 **Easy Export**: Direct export to Notion workspaces
+
+│   └── Dockerfile
+
+├── frontend/               # React frontendOPENROUTER_API_KEY=your_openrouter_api_key_here
+
+│   ├── src/
+
+│   │   ├── components/     # UI componentsNOTION_INTEGRATION_SECRET=secret_your_notion_integration_secret_here│  │  OpenRouter  │                    │    Notion    │       │
+
+│   │   ├── pages/          # Page components
+
+│   │   └── services/       # API & state
+
+│   ├── Dockerfile
+
+│   └── nginx.conf# Optional│  │     API      │                    │     API      │       │```
+
+├── Makefile               # Build automation
+
+├── docker-compose.yml     # Container configAPP_ENV=development
+
+└── .env.example           # Environment template
+
+```DEBUG=true│  └──────────────┘                    └──────────────┘       │
+
+
+
+## 🛠️ DevelopmentLOG_LEVEL=INFO
+
+
+
+### Backend```└─────────────────────────────────────────────────────────────┘┌─────────────────────────────────────────────────────────────┐## 🚀 Quick Start
+
+
+
+```bash
+
+make dev-backend           # Run backend only
+
+black backend/             # Format code### 3. Get API Keys```
+
+flake8 backend/            # Lint code
+
+```
+
+
+
+### Frontend#### OpenRouter API Key│                     Frontend (React)                         │
+
+
+
+```bash
+
+make dev-frontend          # Run frontend only
+
+cd frontend && npm run build  # Build for production1. Sign up at [OpenRouter](https://openrouter.ai/)## 🚀 Quick Start
+
+cd frontend && npm run lint   # Lint code
+
+```2. Navigate to [API Keys](https://openrouter.ai/keys)
+
+
+
+## 📚 API Documentation3. Create a new API key│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐      │### Prerequisites
+
+
+
+Visit http://localhost:8000/api/docs for interactive API documentation.4. Copy and paste into `.env`
+
+
+
+### Key Endpoints### Prerequisites
+
+
+
+| Endpoint | Method | Description |#### Notion Internal Integration
+
+|----------|--------|-------------|
+
+| `/api/auth/session` | POST | Create session |│  │  Components  │  │    Pages     │  │   Services   │      │
+
+| `/api/auth/keys` | POST | Store API keys |
+
+| `/api/templates/generate` | POST | Generate template |1. Go to [Notion Integrations](https://www.notion.so/my-integrations)
+
+| `/api/notion/import` | POST | Import to Notion |
+
+2. Click **"+ New integration"**- Python 3.11+
+
+## 🎯 Usage
+
+3. Give it a name (e.g., "Template Maker")
+
+1. **Configure API Keys**
+
+   - Click settings icon (⚙️)4. Select your workspace- Node.js 18+│  │  (UI/UX)     │  │  (Routes)    │  │  (API/State) │      │- Python 3.8 or higher
+
+   - Enter OpenRouter API key
+
+   - Enter Notion Integration Secret5. Set capabilities:
+
+   - Save
+
+   - ✅ Read content- npm or pnpm
+
+2. **Generate Template**
+
+   - Select template type   - ✅ Insert content
+
+   - Enter title and description
+
+   - Choose complexity level   - ✅ Update content- OpenRouter API Key│  └──────────────┘  └──────────────┘  └──────────────┘      │- A Notion account
+
+   - Select features
+
+   - Click "Generate Template"6. Copy the **"Internal Integration Secret"**
+
+
+
+3. **Import to Notion**7. Paste into `.env`- Notion Internal Integration Secret
+
+   - Review generated template
+
+   - Click "Import to Notion"
+
+   - Template created in your workspace
+
+**Important**: Share your Notion pages with the integration:└─────────────────────────────────────────────────────────────┘- An OpenRouter API key ([Get one here](https://openrouter.ai/keys))
+
+## 🤝 Contributing
+
+- Open page in Notion → "•••" menu → "Add connections" → Select your integration
+
+Contributions welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+### One-Command Setup
+
+1. Fork the repository
+
+2. Create feature branch (`git checkout -b feature/AmazingFeature`)## 🐳 Docker Deployment
+
+3. Commit changes (`git commit -m 'Add AmazingFeature'`)
+
+4. Push to branch (`git push origin feature/AmazingFeature`)                            ↕ HTTP/REST
+
+5. Open Pull Request
+
+```bash
+
+## 📝 License
+
+# Build and start```bash
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+make docker-build
+
+## 🙏 Acknowledgments
+
+make docker-up# Clone repository┌─────────────────────────────────────────────────────────────┐### Installation
+
+- [FastAPI](https://fastapi.tiangolo.com/) - Modern Python framework
+
+- [React](https://reactjs.org/) - UI library
+
+- [Tailwind CSS](https://tailwindcss.com/) - CSS framework
+
+- [Notion API](https://developers.notion.com/) - Notion integration# View logsgit clone https://github.com/yourusername/notion-template-maker.git
+
+- [OpenRouter](https://openrouter.ai/) - AI model routing
+
+- [Vite](https://vitejs.dev/) - Build toolmake docker-logs
+
+
+
+## 📞 Supportcd notion-template-maker│                     Backend (FastAPI)                        │
+
+
+
+- 🐛 [Report Issues](https://github.com/yourusername/notion-template-maker/issues)# Stop
+
+- 💬 [Discussions](https://github.com/yourusername/notion-template-maker/discussions)
+
+- 📧 Email: support@notiontemplate.commake docker-down
+
+
+
+## 🗺️ Roadmap```
+
+
+
+- [x] AI-powered template generation# Install and run│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐      │#### Option 1: Using Makefile (Recommended)
+
+- [x] Notion Internal Integration
+
+- [x] Docker deployment## 📁 Project Structure
+
+- [ ] Template marketplace
+
+- [ ] Batch generationmake install && make dev
+
+- [ ] Custom AI models
+
+- [ ] Template versioning```
+
+- [ ] Multi-language support
+
+notion-template-maker/```│  │     API      │  │   Services   │  │    Models    │      │
+
+## 🔒 Security
+
+├── backend/                 # FastAPI backend
+
+See [SECURITY.md](SECURITY.md) for security practices and vulnerability reporting.
+
+│   ├── main.py             # Application entry
+
+---
+
+│   ├── api/routes/         # API endpoints
+
+<p align="center">
+
+  <strong>Made with ❤️ for the Notion community</strong>│   └── DockerfileThat's it! The application will be running at:│  │   (Routes)   │  │  (Business)  │  │   (Data)     │      │```bash
+
+</p>
 
 ├── frontend/               # React frontend
 
-│   ├── src/- **Frontend**: http://localhost:5173
+<p align="center">
+
+  <a href="https://github.com/yourusername/notion-template-maker">⭐ Star us on GitHub</a>│   ├── src/- **Frontend**: http://localhost:5173
+
+</p>
 
 │   │   ├── components/     # UI components
 
