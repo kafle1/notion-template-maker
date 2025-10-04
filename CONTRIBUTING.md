@@ -1,208 +1,78 @@
-# Contributing to Notion Template Maker
+# Contributing
 
-First off, thank you for considering contributing to Notion Template Maker! It's people like you that make this tool great.
+Thank you for considering contributing to Notion Template Maker!
 
-## 🤝 Code of Conduct
-
-This project and everyone participating in it is governed by our Code of Conduct. By participating, you are expected to uphold this code.
-
-## 🚀 How Can I Contribute?
+## How to Contribute
 
 ### Reporting Bugs
 
-Before creating bug reports, please check the existing issues to avoid duplicates. When you create a bug report, include as many details as possible:
+- Check existing issues first
+- Use a clear, descriptive title
+- Include steps to reproduce
+- Provide environment details (OS, Python/Node versions)
 
-- **Use a clear and descriptive title**
-- **Describe the exact steps to reproduce the problem**
-- **Provide specific examples**
-- **Describe the behavior you observed and what you expected**
-- **Include screenshots if applicable**
-- **Include your environment details** (OS, Python version, Node version, etc.)
+### Suggesting Features
 
-### Suggesting Enhancements
-
-Enhancement suggestions are tracked as GitHub issues. When creating an enhancement suggestion:
-
-- **Use a clear and descriptive title**
-- **Provide a detailed description of the suggested enhancement**
-- **Explain why this enhancement would be useful**
-- **List any similar features in other applications**
+- Use a clear, descriptive title
+- Explain why it would be useful
+- Provide examples if possible
 
 ### Pull Requests
 
-1. **Fork the repo** and create your branch from `main`
-2. **Make your changes** following our coding standards
-3. **Format your code** (`make format`)
-4. **Run linters** (`make lint`)
-5. **Write a good commit message**
+1. Fork the repository
+2. Create a branch: `git checkout -b feature/amazing-feature`
+3. Make your changes
+4. Format code: `make format`
+5. Run linters: `make lint`
+6. Commit: `git commit -m 'feat: add amazing feature'`
+7. Push: `git push origin feature/amazing-feature`
+8. Open a Pull Request
 
-## 📝 Development Process
-
-### Setup Development Environment
+## Development Setup
 
 ```bash
-# Clone your fork
 git clone https://github.com/YOUR_USERNAME/notion-template-maker.git
 cd notion-template-maker
-
-# Install dependencies
 make install
-
-# Run development server
 make dev
 ```
 
-### Project Structure
+## Coding Standards
 
-```
-notion-template-maker/
-├── backend/          # FastAPI backend
-├── frontend/         # React frontend
-└── docs/            # Documentation
-```
-
-### Coding Standards
-
-#### Python (Backend)
-- Follow PEP 8 style guide
+### Python
+- Follow PEP 8
 - Use type hints
-- Maximum line length: 88 characters (Black default)
-- Docstrings for all public functions/classes
+- Max line length: 88 characters
+- Add docstrings to public functions
 
-```python
-def generate_template(title: str, description: str) -> Template:
-    """Generate a Notion template based on input.
-    
-    Args:
-        title: The template title
-        description: Detailed description of template needs
-        
-    Returns:
-        Template: The generated template object
-        
-    Raises:
-        ValidationError: If input is invalid
-    """
-    pass
-```
-
-#### JavaScript/React (Frontend)
+### JavaScript/React
 - Use functional components with hooks
 - Follow ESLint configuration
 - Use meaningful variable names
-- Add PropTypes or TypeScript types
 
-```jsx
-const TemplateCard = ({ template, onImport }) => {
-  // Component logic
-  return (
-    <div className="template-card">
-      {/* JSX */}
-    </div>
-  );
-};
-```
+## Commit Messages
 
-#### General Guidelines
-- Keep functions small and focused
-- Write self-documenting code
-- Add comments for complex logic
-- Avoid premature optimization
-- Use meaningful commit messages
-
-### Commit Messages
-
-Follow the [Conventional Commits](https://www.conventionalcommits.org/) specification:
+Follow [Conventional Commits](https://www.conventionalcommits.org/):
 
 ```
-feat: add template type selector
-fix: resolve OAuth callback issue
-docs: update API documentation
-style: format code with black
-refactor: simplify template validator
-test: add integration tests for import
+feat: add new feature
+fix: resolve bug
+docs: update documentation
+style: format code
+refactor: improve code structure
 chore: update dependencies
 ```
 
-### Branch Naming
+## Branch Naming
 
 - `feature/` - New features
 - `fix/` - Bug fixes
-- `docs/` - Documentation only
+- `docs/` - Documentation
 - `refactor/` - Code refactoring
-- `chore/` - Maintenance tasks
 
-Example: `feature/add-template-sharing`
+## Questions?
 
-## 🏗️ Architecture Guidelines
-
-### Backend (FastAPI)
-- Keep routes thin, logic in services
-- Use dependency injection
-- Validate input with Pydantic models
-- Handle errors gracefully
-- Use async/await for I/O operations
-
-### Frontend (React)
-- One component per file
-- Keep components small and reusable
-- Use custom hooks for shared logic
-- Manage state with Zustand
-- Follow atomic design principles
-
-### Database/Models
-- Use Pydantic for data validation
-- Keep models simple and focused
-- Add helpful error messages
-- Document model fields
-
-## 📚 Documentation
-
-- Update README.md for user-facing changes
-- Add docstrings to all public APIs
-- Update API documentation for endpoint changes
-- Include examples in documentation
-- Keep CHANGELOG.md up to date
-
-## 🐛 Debugging Tips
-
-### Backend Debugging
-```bash
-# Run with debug logging
-LOG_LEVEL=DEBUG make dev-backend
-
-# Use pdb for debugging
-import pdb; pdb.set_trace()
-```
-
-### Frontend Debugging
-```bash
-# Run with debug output
-make dev-frontend
-
-# Use browser DevTools
-# Add debugger statements in code
-```
-
-## 📦 Release Process
-
-1. Update version in `pyproject.toml` and `package.json`
-2. Update CHANGELOG.md
-3. Create a pull request to `main`
-4. After merge, create a GitHub release
-5. Tag follows semantic versioning: `v2.1.0`
-
-## ❓ Questions?
-
-- Open a [GitHub Discussion](https://github.com/yourusername/notion-template-maker/discussions)
-- Check existing [Issues](https://github.com/yourusername/notion-template-maker/issues)
-- Read the [Documentation](https://github.com/yourusername/notion-template-maker/wiki)
-
-## 🎉 Recognition
-
-Contributors will be:
-- Added to CONTRIBUTORS.md
-- Mentioned in release notes
-- Credited in the README (for significant contributions)
+- Open a [Discussion](https://github.com/kafle1/notion-template-maker/discussions)
+- Check [Issues](https://github.com/kafle1/notion-template-maker/issues)
 
 Thank you for contributing! 🙌
