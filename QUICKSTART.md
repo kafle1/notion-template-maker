@@ -29,8 +29,8 @@ cp .env.example .env
 
 2. **Add your API keys to `.env`:**
 ```env
-OPENROUTER_API_KEY=your_key_here
-NOTION_INTEGRATION_SECRET=your_secret_here
+OPENROUTER_API_KEY=your_openrouter_api_key_here
+NOTION_INTEGRATION_SECRET=your_notion_integration_secret_here
 ```
 
 3. **Get API keys:**

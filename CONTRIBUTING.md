@@ -31,7 +31,7 @@ Thank you for considering contributing to Notion Template Maker!
 ## Development Setup
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/notion-template-maker.git
+git clone https://github.com/kafle1/notion-template-maker.git
 cd notion-template-maker
 make install
 make dev

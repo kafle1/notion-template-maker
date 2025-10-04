@@ -3,7 +3,9 @@
 > A modern, production-ready web application for generating customized Notion templates using AI.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
+[![Python 3.11+](https://2. Create feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit changes (`git commit -m 'Add amazing-feature'`)
+4. Push to branch (`git push origin feature/amazing-feature`).shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![React 18](https://img.shields.io/badge/react-18-blue.svg)](https://reactjs.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.104-green.svg)](https://fastapi.tiangolo.com/)
 
@@ -100,14 +102,16 @@ cp .env.example .env
 Edit \`.env\`:
 
 \`\`\`env
+```env
 # Required
 OPENROUTER_API_KEY=your_openrouter_api_key_here
-NOTION_INTEGRATION_SECRET=secret_your_notion_integration_secret_here
+NOTION_INTEGRATION_SECRET=your_notion_integration_secret_here
 
 # Optional
 APP_ENV=development
 DEBUG=true
 LOG_LEVEL=INFO
+```
 \`\`\`
 
 ### 3. Get API Keys
